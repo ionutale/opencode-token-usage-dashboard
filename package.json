@@ -1,0 +1,43 @@
+{
+  "name": "opencode-token-usage-dashboard",
+  "version": "0.1.0",
+  "description": "OpenCode token usage dashboard with local per-model history, Go quota forecast, filters, and copy",
+  "type": "module",
+  "license": "MIT",
+  "repository": "github:ionutale/opencode-token-usage-dashboard",
+  "exports": {
+    ".": "./src/index.ts",
+    "./tui": "./dist/tui.js"
+  },
+  "files": [
+    "src",
+    "dist",
+    "!src/**/*.test.ts",
+    "!src/**/*.test.tsx"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "build:tui": "node scripts/build-tui.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@opentui/core": ">=0.5.12",
+    "@opentui/solid": ">=0.5.12",
+    "solid-js": ">=1.9.0"
+  },
+  "dependencies": {
+    "@opencode/plugin": "^2.0.18"
+  },
+  "devDependencies": {
+    "@opentui/core": "^0.5.12",
+    "@opentui/solid": "^0.5.12",
+    "@types/node": "^26.6.3",
+    "esbuild": "^0.25.0",
+    "solid-js": "^1.9.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.2"
+  }
+}

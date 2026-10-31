@@ -1,0 +1,6 @@
+node_modules/
+dist/*
+!dist/tui.js
+.DS_Store
+*.capture.txt
+.superpowers/
